@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,BooleanField,TextAreaField
+from wtforms import StringField,TextAreaField,URLField
 
 class TodoForm(FlaskForm):
     id =StringField()
     title   = StringField()
-    description    = TextAreaField()
-    done = BooleanField()
+    plot    = TextAreaField()
+    year = StringField()
+    actors = TextAreaField()
 

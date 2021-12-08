@@ -13,18 +13,21 @@
 <table>
     <thead>
     <th>Id</th>
-    <th>Tytuł</th>
-    <th>Opis</th>
-    <th>Czy zrobione?</th>
+    <th>Title</th>
+    <th>Plot</th>
+    <th>Year</th>
+    <th>Cast</th>
 
     </thead>
 {% for todo in todos %}
     <tr>
         <td>{{ todo.id }}</td>
         <td>{{ todo.title }}</td>
-        <td>{{ todo.description }}</td>
-        <td>{{ todo.done }}</td>
-<!--<a href="/todos/{{ loop.index }}">-->
+        <td>{{ todo.plot }}</td>
+        <td>{{ todo.year }}</td>
+        <td>{{ todo.actors }}</td>
+
+
     </tr>
 {% endfor %}
 </table>
