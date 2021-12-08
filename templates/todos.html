@@ -12,21 +12,28 @@
 
 <table>
     <thead>
-    <th>Tytuł</th>
-    <th>Opis</th>
-    <th>Czy zrobione?</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Plot</th>
+    <th>Year</th>
+    <th>Cast</th>
+
     </thead>
 {% for todo in todos %}
     <tr>
-        <td><a href="/todos/{{ loop.index }}">{{ todo.title }}</a></td>
-        <td>{{ todo.description }}</td>
-        <td>{{ todo.done }}</td>
+        <td>{{ todo.id }}</td>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.plot }}</td>
+        <td>{{ todo.year }}</td>
+        <td>{{ todo.actors }}</td>
+
+
     </tr>
 {% endfor %}
 </table>
 <div>
     <h2> Dodaj nowe zadanie: </h2>
-    <form method="POST" action="/todos/">
+    <form method="POST" action="/">
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}

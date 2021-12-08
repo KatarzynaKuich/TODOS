@@ -1,6 +1,5 @@
 import json
 
-
 class Todos:
     def __init__(self):
         try:
