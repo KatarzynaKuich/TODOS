@@ -1,6 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,IntegerField,FormField
-from wtforms.validators import DataRequired, Email
+from wtforms import StringField,BooleanField,TextAreaField
 
 
 #todos = [ {'title': 'Zakupy','description': 'Mleko, jajka, mąka, olej, papier toaletowy (jak będzie)',
@@ -9,6 +8,6 @@ from wtforms.validators import DataRequired, Email
 
 class TodoForm(FlaskForm):
     title   = StringField()
-    description    = StringField()
-    done = FormField(FlaskForm)
+    description    = TextAreaField()
+    done = BooleanField()
 
